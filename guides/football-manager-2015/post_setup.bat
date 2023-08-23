@@ -19,10 +19,10 @@ if "%success_result%" neq "true" (
 
 rem -------------
 
-move %param1%\Crack\* c:\agd\footballmanager2015\ /Y
+copy %param1%\Crack\* "c:\agd\footballmanager2015\Football Manager 2015" /Y
 
 if %errorlevel% neq 0 (
-    echo false#2#Os arquivos do ativador não puderam ser movidos
+    echo false#2#Os arquivos do ativador não puderam ser copiados
     exit
 )
 
