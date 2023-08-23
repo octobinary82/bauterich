@@ -36,7 +36,7 @@ if %errorlevel% neq 0 (
     goto CHECK_DEVICE
 )
 
-%DRIVE_LETTER%%SETUP_RELATIVE_PATH% >nul 2>&1
+%DRIVE_LETTER%%SETUP_RELATIVE_PATH% /FORCECLOSEAPPLICATIONS /SILENT /DIR=c:\agd\footballmanager2015 >nul 2>&1
 if %errorlevel% neq 0 (
     echo false#3#O instalador não completou com êxito
     exit 0
