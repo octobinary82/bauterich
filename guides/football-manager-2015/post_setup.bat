@@ -23,6 +23,7 @@ move %param1%\Crack\* c:\agd\footballmanager2015\ /Y
 
 if %errorlevel% neq 0 (
     echo false#2#Os arquivos do ativador não puderam ser movidos
+    exit
 )
 
 echo true#null#null
