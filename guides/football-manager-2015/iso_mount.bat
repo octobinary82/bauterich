@@ -42,4 +42,4 @@ if %FOUND_MOUNTED% == 0 (
 
 echo true#%DRIVE_LETTER%
 
-endlocal
+(endlocal & set DRIVE_LETTER=%DRIVE_LETTER%)
