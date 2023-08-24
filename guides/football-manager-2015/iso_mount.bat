@@ -25,6 +25,7 @@ if "%PROCESSOR_ARCHITECTURE%"=="AMD64" (
 set IMGDRIVECMD=%IMGDRIVECMD_DIR%imgdrivecmd_%ARCHITECTURE%.exe
 
 rem Monta a imagem
+%IMGDRIVECMD% -xi
 %IMGDRIVECMD% -m "%ISO_PATH%" >nul
 
 set FOUND_MOUNTED=0
