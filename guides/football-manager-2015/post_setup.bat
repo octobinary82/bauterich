@@ -26,6 +26,23 @@ if %errorlevel% neq 0 (
     exit
 )
 
+set IMGDRIVECMD_DIR=%cd%/
+
+if "%PROCESSOR_ARCHITECTURE%"=="AMD64" (
+    set ARCHITECTURE=x64
+) else if "%PROCESSOR_ARCHITECTURE%"=="x86" (
+    set ARCHITECTURE=x86
+) else if "%PROCESSOR_ARCHITECTURE%"=="ARM64" (
+    set ARCHITECTURE=ARM64
+) else (
+    echo false#1#Arquitetura do OS desconhecida
+    exit 0
+)
+
+set IMGDRIVECMD=%IMGDRIVECMD_DIR%imgdrivecmd_%ARCHITECTURE%.exe
+
+%IMGDRIVECMD% -xu
+
 echo true#null#null
 
 endlocal
