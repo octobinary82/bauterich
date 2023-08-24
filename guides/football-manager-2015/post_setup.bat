@@ -10,6 +10,8 @@ for /f "tokens=1,2,3,4,5,6 delims=#" %%a in ('echo %SETUP_RUN_MESSAGE%') do (
     set param2=%%c
 )
 
+set DRIVE_LETTER=%param1%
+
 if "%success_result%" neq "true" (
     echo false#1#O setup não pôde ser executado: %param2%
     exit
