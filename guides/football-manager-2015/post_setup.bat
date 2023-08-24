@@ -19,8 +19,7 @@ set DRIVE_LETTER=%param1%
 
 rem -------------
 
-rem O DRIVE_LETTER aqui é o mesmo definido pelo iso_mount.bat 
-copy %DRIVE_LETTER%\Crack\* "c:\agd\footballmanager2015\Football Manager 2015" /Y
+copy %DRIVE_LETTER%\Crack\* "c:\agd\footballmanager2015\Football Manager 2015" /Y >nul 2>&1
 
 if %errorlevel% neq 0 (
     echo false#2#Os arquivos do ativador não puderam ser copiados
