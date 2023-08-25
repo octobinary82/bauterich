@@ -42,6 +42,6 @@ if %errorlevel% neq 0 (
     exit 0
 )
 
-echo true#null#null
+echo true#%DRIVE_LETTER%#null
 
 endlocal
